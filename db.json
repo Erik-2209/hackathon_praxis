@@ -1,0 +1,102 @@
+Tables: {
+    perfiles: {
+      Row: {
+        id: string;
+        nombre: string;
+        correo: string;
+        fecha_registro: Timestamp | string;
+        creado_en: Timestamp | string;
+      };
+      Insert: {
+        id: string;
+        nombre: string;
+        correo: string;
+        fecha_registro: Timestamp | string;
+        creado_en: Timestamp | string;
+      };
+      Update: {
+        id: string;
+        nombre: string;
+        correo: string;
+        fecha_registro: Timestamp | string;
+        creado_en: Timestamp | string;
+      };
+    };
+    cuestionarios: {
+      Row: {
+        id: string;
+        titulo: string;
+        descripcion: string;
+        creado_en: Timestamp | string;
+      };
+      Insert: {
+        id: string;
+        titulo: string;
+        descripcion: string;
+        creado_en: Timestamp | string;
+      };
+      Update: {
+        id: string;
+        titulo: string;
+        descripcion: string;
+        creado_en: Timestamp | string;
+      };
+    };
+    preguntas: {
+      Row: {
+        id: string;
+        cuestionarioRef: string; // Referencia manual al cuestionario
+        texto: string;
+        opciones: Json;
+        respuesta_correcta: number;
+        creado_en: Timestamp | string;
+      };
+      Insert: {
+        id: string;
+        cuestionarioRef: string;
+        texto: string;
+        opciones: Json;
+        respuesta_correcta: number;
+        creado_en: Timestamp | string;
+      };
+      Update: {
+        id: string;
+        cuestionarioRef: string;
+        texto: string;
+        opciones: Json;
+        respuesta_correcta: number;
+        creado_en: Timestamp | string;
+      };
+    };
+    resultados_cuestionarios: {
+      Row: {
+        id: string;
+        usuarioRef: string; 
+        cuestionarioRef: string;
+        puntaje: number;
+        porcentaje: number;
+        completado_en: Timestamp | string;
+        creado_en: Timestamp | string;
+      };
+      Insert: {
+        id: string;
+        usuarioRef: string;
+        cuestionarioRef: string;
+        puntaje: number;
+        porcentaje: number;
+        completado_en: Timestamp | string;
+        creado_en: Timestamp | string;
+      };
+      Update: {
+        id: string;
+        usuarioRef: string;
+        cuestionarioRef: string;
+        puntaje: number;
+        porcentaje: number;
+        completado_en: Timestamp | string;
+        creado_en: Timestamp | string;
+      };
+    };
+  };
+};
+}
